@@ -1,0 +1,152 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+    text-decoration: none;
+    box-sizing: border-box;
+    font-family: Popins, sans-serif;
+}
+html,body{
+    font-size: 62.5%;
+}
+
+:root{
+    --main-color: #fff;
+    --second-color: #5100e6;
+    --third-color: #f8f1c1;
+}
+
+/* Nav Section Start */
+.nav-section{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 50px;
+    height: 80px;
+    width: 100%;
+    background-color: var(--third-color);
+}
+.nav-brand h3{
+    text-transform: capitalize;
+    font-weight: 700;
+    font-size: 2rem;
+}
+.nav-section ul{
+    display: flex;
+    gap: 50px;
+    
+}
+.nav-pages li a {
+    font-size: 1.9rem;
+    text-transform: capitalize;
+    color: #000;
+    font-weight: 500;
+    display: inline-block;
+    position: relative;
+
+  &::after{
+    content: "";
+    position: absolute;
+    left: 0;
+    width: 0%;
+    bottom: -0.3rem;
+    border-bottom: 0.3rem solid #000;
+    transition: all 0.2s linear;
+
+  }
+}
+.nav-pages li a:hover:after{
+    width: 100%;
+}
+.nav-pages .active{
+    font-weight: 700;
+}
+.signup-btn{
+    font-size: 1.3rem;
+    text-transform: capitalize;
+    color: var(--main-color);
+    background-color: #000;
+    padding: 10px 15px;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+/* Nav Section End */
+/* Hero Section Start */
+ .hero-section{
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    justify-content: center;
+    align-items: center;
+    height: calc(100vh - 80px);
+    width: 100%;
+    background-color: var(--third-color);
+    gap: 10px;
+ }
+ .left-col{
+    padding-left: 2rem;
+    grid-column: 2/6;
+ }
+ .right-col{
+    grid-column: 7/-1;
+ }
+ .hero-section h2{
+    font-size: 3.5rem;
+    
+ }
+ .hero-section span{
+    color: var(--second-color);
+ }
+ .hero-section p{
+    font-size: 1.5rem;
+    padding: 2rem 0 1rem 0;
+ }
+ .hero-section a {
+    display: inline-block;
+    background-color: var(--second-color);
+    color: var(--main-color);
+    font-size: 1.7rem;
+    padding: 10px 15px;
+    border-radius: 5px;
+    transition: all 0.2s ease;
+ }
+
+ .hero-section a:hover{
+    background-color: #000;
+    color: var(--main-color);
+ }
+.right-col img{
+    height: calc(100vh - 80px);
+    width: 90%;
+}
+/* Hero Section End */
+
+/* Company logo Section Start */
+.company-logo{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+.company-logo img{
+    width: 90%;
+    height: 90%;
+}
+/* Company logo Section End */
+
+/* Media Queries */
+
+/* hero Section responsive */
+@media (max-width: 768px){
+    .hero-section{
+        display: block;
+        text-align: center;
+        padding: 30px;
+    }
+    .hero-section img{
+        height: 70%;
+        width: 70%;
+        margin-top: -5rem;
+    }
+}
